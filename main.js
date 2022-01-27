@@ -4,8 +4,6 @@ var messageInput = document.getElementById('message');
 
 document.getElementsByTagName('button')[0].addEventListener('click', function (event) {
   var container = document.createElement('div');
-  container.setAttribute('class', 'page-header');
-  container.innerHTML = messageInput.value
-  container.insertAdjacentHTML('beforeend', `<p>Posted By: <strong>${authorInput.value}</strong>`);
+  container.insertAdjacentHTML('beforeend', `<p>${messageInput.value}</p><p>Posted By: <strong>${authorInput.value}</strong></p><hr>`);
   postsElement.appendChild(container);
 });
